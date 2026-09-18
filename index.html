@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TS 贪吃蛇小游戏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 16px;
+            color: #4cc9f0;
+            letter-spacing: 2px;
+        }
+        .info-panel {
+            display: flex;
+            gap: 40px;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 22px;
+        }
+        .info-item {
+            background: rgba(76, 201, 240, 0.15);
+            padding: 8px 20px;
+            border-radius: 12px;
+            border: 1px solid #4cc9f050;
+        }
+        #game {
+            width: 440px;
+            height: 440px;
+            background-color: #0f3460;
+            border: 6px solid #4cc9f0;
+            border-radius: 16px;
+            box-shadow: 0 0 30px #4cc9f040;
+            position: relative;
+            overflow: hidden;
+        }
+        .snake {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, #4cc9f0, #4361ee);
+            border-radius: 6px;
+            position: absolute;
+            box-shadow: 0 0 8px #4cc9f0;
+        }
+        .snake-head {
+            background: linear-gradient(45deg, #7209b7, #f72585);
+        }
+        .food {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, #f72585, #ff4d6d);
+            border-radius: 50%;
+            position: absolute;
+            box-shadow: 0 0 10px #f72585;
+        }
+        .tip-text {
+            margin-top:18px;
+            color:#a0aec0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TypeScript 贪吃蛇</h1>
+        <div class="info-panel">
+            <div class="info-item">SCORE: <span id="score">0</span></div>
+            <div class="info-item">LEVEL: <span id="level">1</span></div>
+        </div>
+        <div id="game"></div>
+        <p class="tip-text">使用方向键 ↑ ↓ ← → 控制蛇移动</p>
+    </div>
+    <script src="./dist/index.js"></script>
+</body>
+</html>
